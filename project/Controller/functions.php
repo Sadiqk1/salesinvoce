@@ -70,9 +70,7 @@ class DB_con extends dbconn
         $stmt = $this->dbh->prepare($query);
         $stmt->bind_param("isssss",$id,$iname,$phone,$contact,$addresss,$dat);
         $stmt->execute();
-        var_dump($stmt->execute());
-//        var_dump($stmt);
-//        die;
+      
         if ($stmt->execute()) {
             echo "<script>alert('Data inserted'); </script>";
 
